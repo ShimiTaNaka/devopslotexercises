@@ -1,0 +1,2 @@
+ENV_VAR1="sample variable 1"
+ENV_VAR2="yet another sample"

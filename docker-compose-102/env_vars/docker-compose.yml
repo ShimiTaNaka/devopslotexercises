@@ -1,0 +1,19 @@
+version: '3'
+services:
+  dummy-app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: ${NAMESPACE}/sample-app
+    environment:
+      SLEEP_TIME_SECONDS: 5
+
+  dummy-app2:
+    image: ${NAMESPACE}/sample-app
+    environment:
+      ENV_VAR1: 'variable 1'
+
+  dummy-app3:
+    image: ${NAMESPACE}/sample-app
+    env_file:
+      - env-file

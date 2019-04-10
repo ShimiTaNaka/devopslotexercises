@@ -1,0 +1,8 @@
+services:
+  dummy-app:
+    image: debian:stretch-slim
+    volumes:
+      - .:/mount1
+      - sample:/mount2
+volumes:
+  sample:
